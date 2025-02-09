@@ -1,6 +1,7 @@
 
 
 class GOL:
+    
     def __init__(self, n, m, colors, nbrs):
         self.n = n
         self.m = m
