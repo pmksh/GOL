@@ -1,7 +1,7 @@
-
+import random
 
 class GOL:
-    
+
     def __init__(self, n, m, colors, nbrs):
         self.n = n
         self.m = m
@@ -28,6 +28,11 @@ class GOL:
             return -1
         self.world = world
         return 1
+    
+    def set_world_random(self):
+        for i in range(self.n):
+            for j in range(self.m):
+                self.world[i][j] = random.randint(0,self.c-1)
 
     def set_state(self, x, y, color):
         if x >= self.n or y >= self.m or color >= self.c:
